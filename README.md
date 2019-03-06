@@ -1,10 +1,10 @@
-# Pulse Adapter
+# THIS DOES NOTHING YET, I JUST FORKED THIS OTHER PROJECT... THE DESCRIPTION IS WHAT I AM PLANNING.
 
-This is basically an On/Off switch which turns itself off after some
-configured amount of time.
+# Alarm Watcher
 
-This can be useful when combined with real devices using the
-rules engine.
+This is an On/Off swtich which watches for an input to occur fore more than a specified time, and then turn's it self to on.
+
+For example, you could set a door sensor open to this, and then it will change it's state to ON if the door is open more than the required time. So this could create the effect of "If the door has been open for longer than 30 seconds within 2 minutes, sound the alarm."
 
 ## Configuration
 
@@ -14,10 +14,8 @@ Sets the name of the device. This must be unique
 
 ### duration
 
-The amount of time, in seconds, before the device will turn itself off.
+The amount of time, in seconds, before the device will set itself as on.
 
-### invert
+### interval
 
-If checked, inverts the on/off behaviour. The device starts out on and
-turning it off will trigger timer, and it will turn itself back on after
-the timer expires.
+The amount of time before it resets its internal timer to 0.
